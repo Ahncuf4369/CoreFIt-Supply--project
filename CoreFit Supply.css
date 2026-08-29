@@ -1,0 +1,239 @@
+/* CoreFit Supply Part 2 */
+
+:root {
+    --dark: #1F2933;
+    --green: #0B5D2A;
+    --accent: #16803C;
+    --light: #F4F6F8;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header,
+footer {
+    background: var(--dark);
+    color: var(--white);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.logo,
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+
+    list-style: none;
+    padding: 0;
+}
+
+main,
+section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    background: var(--light);
+    padding: 5rem 1rem;
+}
+
+section {
+    padding: 3rem 1rem;
+}
+
+.button {
+    display: inline-block;
+
+    background: var(--green);
+    color: var(--white);
+
+    padding: 0.75rem 1rem;
+
+    border: 0;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--accent);
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1rem;
+}
+
+.grid article {
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 1rem;
+}
+
+.placeholder {
+    min-height: 150px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--light);
+
+    color: var(--green);
+
+    font-weight: bold;
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.large {
+    min-height: 300px;
+}
+
+.price {
+    font-weight: bold;
+
+    color: var(--green);
+
+    font-size: 1.2rem;
+}
+
+.detail {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 2rem;
+}
+
+form {
+    display: grid;
+
+    gap: 1rem;
+
+    max-width: 700px;
+}
+
+fieldset {
+    display: grid;
+
+    gap: 0.8rem;
+
+    padding: 1rem;
+}
+
+label {
+    display: grid;
+
+    gap: 0.3rem;
+
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 0.65rem;
+
+    font: inherit;
+
+    border: 1px solid #777;
+
+    border-radius: 5px;
+}
+
+.empty {
+    background: var(--light);
+
+    padding: 2rem;
+
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+
+    padding: 1.5rem;
+}
+
+/* Accessibility focus */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+
+    outline-offset: 3px;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .grid,
+    .detail {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+
+        gap: 0.5rem;
+    }
+
+    .button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
