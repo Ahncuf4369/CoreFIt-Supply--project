@@ -691,3 +691,25 @@ if (couponInput && couponMessage) {
         }
     });
 }
+
+// Network Connection Test
+
+const hostName = document.getElementById("host-name");
+const portNumber = document.getElementById("port-number");
+const protocol = document.getElementById("protocol");
+const launchTime = document.getElementById("launch-time");
+
+if (hostName && portNumber && protocol && launchTime) {
+
+    hostName.textContent = window.location.hostname;
+
+    portNumber.textContent =
+        window.location.port || "Default Port";
+
+    protocol.textContent =
+        window.location.protocol;
+
+    launchTime.textContent =
+        new Date().toLocaleString();
+
+}
